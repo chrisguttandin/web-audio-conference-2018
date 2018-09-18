@@ -1,7 +1,7 @@
 addons:
   chrome: stable
 before_install: npm install npm@latest --global
-<cache:
+cache:
   directories:
     - $HOME/.npm
 dist: trusty
