@@ -1,0 +1,161 @@
+.stage {
+    margin: 17.2vw 0 0;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+@media (min-aspect-ratio: 4/3) {
+
+    .stage {
+        margin: 22.933vh 0 0;
+    }
+
+}
+
+.stage-prop {
+    position: absolute;
+}
+
+.wall-clock {
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    font-size: 100%;
+    margin: -10% 0 0 43%;
+    text-align: center;
+    width: 14%;
+}
+
+.game-clock {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    display: flex;
+    font-size: 80%;
+    margin: 8% 0 0 28.333%;
+    text-align: center;
+    width: 10%;
+}
+
+.digits {
+    display: block;
+    /* This is the font stack that the okaidia theme for Prism is using. */
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    width: 45%;
+}
+
+.minutes {
+    text-align: right;
+}
+
+.colon {
+    display: block;
+    text-align: center;
+    width: 10%;
+}
+
+.seconds {
+    text-align: left;
+}
+
+.home-team-score {
+    height: 30%;
+    margin: 17.83325% 0 0 9.166%;
+    width: 15%;
+}
+
+.away-team-score {
+    height: 30%;
+    margin: 17.83325% 0 0 42.5%;
+    width: 15%;
+}
+
+.home-team-score .wrapper,
+.away-team-score .wrapper {
+    display: table;
+    font-size: 800%;
+    height: 100%;
+    line-height: 80%;
+    width: 100%;
+}
+
+.home-team-score .digit,
+.away-team-score .digit {
+    color: #FFF;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.smartphone-viewport {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    height: 87%;
+    margin: 3.333% 0 0 calc(73.333% - 2px);
+    width: 20%;
+}
+
+.smartphone-viewport h3 {
+    font-size: 200%;
+}
+
+.headline {
+    width: 100%;
+}
+
+.left-aligned-headline {
+    padding: 0 13% 0 10%;
+    text-align: left;
+}
+
+.right-aligned-headline {
+    padding: 0 10% 0 13%;
+    text-align: right;
+}
+
+.disney {
+    background-color: #0596E6;
+}
+
+.lego {
+    background-color: #E3000D;
+}
+
+.category {
+    background-color: #000;
+    display: block;
+    margin: 10% 0 0 0;
+}
+
+.left-aligned-cell {
+    padding: 0 10% 0 13%;
+    text-align: left;
+    width: 50%;
+}
+
+.right-aligned-cell {
+    padding: 0 13% 0 10%;
+    text-align: right;
+    width: 50%;
+}
+
+h3 {
+    color: #000;
+    margin: 0 9%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 120%;
+    line-height: 140%;
+    padding: 0;
+    width: 100%;
+}
+
+th {
+    padding: 0;
+}
+
+td {
+    font-weight: bold;
+}

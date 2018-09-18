@@ -1,0 +1,30 @@
+<h2>World Cup Final</h2>
+<div class="stage">
+    <wac-defs></wac-defs>
+    <svg class="stage-prop" version="1.1" viewBox="0 0 300 150">
+        <use xlink:href="#screen" x="10" y="10"/>
+        <use xlink:href="#keyboard" x="0" y="140"/>
+        <use xlink:href="#viewport" x="20" y="21"/>
+        <use xlink:href="#wall-clock" x="300" y="0"/>
+    </svg>
+    <div class="wall-clock stage-prop">
+        <span class="digits minutes">{{ wallClock$ | async | date:'HH':'GMT' }}</span>
+        <span class="colon">:</span>
+        <span class="digits seconds">{{ wallClock$ | async | date:'mm' }}</span>
+    </div>
+    <div class="game-clock stage-prop">
+        <span class="digits minutes">{{ gameClock$ | async | date:'mm' }}</span>
+        <span class="colon">:</span>
+        <span class="digits seconds">{{ gameClock$ | async | date:'ss' }}</span>
+    </div>
+    <div class="home-team-score lego stage-prop">
+        <div class="wrapper">
+            <span class="digit">0</span>
+        </div>
+    </div>
+    <div class="away-team-score disney stage-prop">
+        <div class="wrapper">
+            <span class="digit">0</span>
+        </div>
+    </div>
+</div>
