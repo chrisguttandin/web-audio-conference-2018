@@ -8,6 +8,7 @@ import { SlideFiveComponent } from './slide-five/slide-five.component';
 import { SlideFourComponent } from './slide-four/slide-four.component';
 import { SlideFourteenComponent } from './slide-fourteen/slide-fourteen.component';
 import { SlideNineComponent } from './slide-nine/slide-nine.component';
+import { SlideNineteenComponent } from './slide-nineteen/slide-nineteen.component';
 import { SlideOneComponent } from './slide-one/slide-one.component';
 import { SlideSevenComponent } from './slide-seven/slide-seven.component';
 import { SlideSeventeenComponent } from './slide-seventeen/slide-seventeen.component';
@@ -77,6 +78,9 @@ const routes: Routes = [
             }, {
                 component: SlideEighteenComponent,
                 path: '18'
+            }, {
+                component: SlideNineteenComponent,
+                path: '19'
             }, {
                 path: '**',
                 redirectTo: '1'

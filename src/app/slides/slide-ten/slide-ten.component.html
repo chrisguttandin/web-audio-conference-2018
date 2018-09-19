@@ -1,6 +1,10 @@
-<h2>Timing Object API</h2>
+<h2>TimingStateVector</h2>
 <ul>
-    <li>provides an easy to use API to sync time sensitive content</li>
+    <li>kowns about the timing at a specific point in time</li>
 </ul>
-<wac-prism language="typescript" ngPreserveWhitespaces><!-- htmlmin:ignore -->update (vector: TimingStateVectorUpdate): Promise&lt;void&gt;;<!-- htmlmin:ignore --></wac-prism>
-<wac-prism language="typescript" ngPreserveWhitespaces><!-- htmlmin:ignore -->query (): TimingStateVector;<!-- htmlmin:ignore --></wac-prism>
+<wac-prism language="typescript" ngPreserveWhitespaces><!-- htmlmin:ignore -->interface TimingStateVector &#123;
+    timestamp: number;
+    position: number;
+    velocity: number;
+    acceleration: number;
+}<!-- htmlmin:ignore --></wac-prism>

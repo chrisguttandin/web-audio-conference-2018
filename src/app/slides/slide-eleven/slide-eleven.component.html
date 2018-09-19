@@ -1,7 +1,6 @@
-<h2>Timing Object usage</h2>
-<wac-prism language="html" ngPreserveWhitespaces><!-- htmlmin:ignore -->&lt;live-stream&gt;&lt;/live-stream&gt;
-&lt;game-stats&gt;&lt;/game-stats&gt;<!-- htmlmin:ignore --></wac-prism>
-<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->const timingObject = new TimingObject();
-
-querySelector('live-stream').timingSrc = timingObject;
-querySelector('game-stats').timingSrc = timingObject;<!-- htmlmin:ignore --></wac-prism>
+<h2>Timing Object API</h2>
+<ul>
+    <li>provides an easy to use API to sync time sensitive content</li>
+</ul>
+<wac-prism language="typescript" ngPreserveWhitespaces><!-- htmlmin:ignore -->query (): TimingStateVector;<!-- htmlmin:ignore --></wac-prism>
+<wac-prism language="typescript" ngPreserveWhitespaces><!-- htmlmin:ignore -->update (vector: TimingStateVectorUpdate): Promise&lt;void&gt;;<!-- htmlmin:ignore --></wac-prism>

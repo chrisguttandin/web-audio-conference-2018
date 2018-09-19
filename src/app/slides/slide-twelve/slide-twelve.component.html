@@ -1,6 +1,9 @@
-<h2>timingSrc property</h2>
-<ul>
-    <li>HTMLMediaElement (&lt;audio/&gt;, &lt;video/&gt;)</li>
-    <li>TimingTextTrack (extends the TextTrack)</li>
-    <li>any custom Web Component which handles time sensitive content</li>
-</ul>
+<h2>Timing Object usage</h2>
+<p>somewhere in your HTML ...</p>
+<wac-prism language="html" ngPreserveWhitespaces><!-- htmlmin:ignore -->&lt;live-stream&gt;&lt;/live-stream&gt;
+&lt;game-stats&gt;&lt;/game-stats&gt;<!-- htmlmin:ignore --></wac-prism>
+<p>... meanwhile in your JavaScript ...</p>
+<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->const timingObject = new TimingObject();
+
+querySelector('live-stream').timingSrc = timingObject;
+querySelector('game-stats').timingSrc = timingObject;<!-- htmlmin:ignore --></wac-prism>

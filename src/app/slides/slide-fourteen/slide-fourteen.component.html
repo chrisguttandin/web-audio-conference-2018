@@ -1,5 +1,8 @@
-<h2>WebRTC Timing Provider</h2>
+<h2>Timing Provider</h2>
 <ul>
-    <li>has a potentially lower latency for synchronizing nearby devices</li>
-    <li>uses the mean value of the half of the RTT as offset</li>
+    <li>synchronizes TimingObjects across tabs, browsers, devices</li>
+    <li>has to be implemented by a third-party provider</li>
+    <li>reference implementation uses a WebSocket connection to a central server</li>
 </ul>
+<wac-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->const timingProvider = new TimingProvider(/* ... */);
+const timingObject = new TimingObject(timingProvider);<!-- htmlmin:ignore --></wac-prism>
