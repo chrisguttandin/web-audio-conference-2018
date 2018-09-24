@@ -18,7 +18,7 @@ describe('slides', () => {
     beforeEach(() => {
         defaultTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 
-        jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 240000;
         jasmine.addMatchers(elementShotMatchers);
     });
 
