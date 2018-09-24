@@ -18,7 +18,7 @@ describe('slides', () => {
     beforeEach(() => {
         defaultTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 
-        jasmine.DEFAULT_TIMEOUT_INTERVAL = 90000;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
         jasmine.addMatchers(elementShotMatchers);
     });
 
@@ -87,7 +87,7 @@ describe('slides', () => {
         it('should look the same', async () => {
             navigateTo('/slides/4');
 
-            await new Promise((resolve) => setTimeout(resolve, 70000));
+            await new Promise((resolve) => setTimeout(resolve, 100000));
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-4');
 
@@ -121,7 +121,7 @@ describe('slides', () => {
         it('should look the same', async () => {
             navigateTo('/slides/6');
 
-            await new Promise((resolve) => setTimeout(resolve, 70000));
+            await new Promise((resolve) => setTimeout(resolve, 100000));
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-6');
 
@@ -171,7 +171,7 @@ describe('slides', () => {
         it('should look the same', async () => {
             navigateTo('/slides/9');
 
-            await new Promise((resolve) => setTimeout(resolve, 70000));
+            await new Promise((resolve) => setTimeout(resolve, 100000));
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-9');
 
@@ -285,7 +285,7 @@ describe('slides', () => {
         it('should look the same', async () => {
             navigateTo('/slides/16');
 
-            await new Promise((resolve) => setTimeout(resolve, 70000));
+            await new Promise((resolve) => setTimeout(resolve, 100000));
 
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-16');
 
