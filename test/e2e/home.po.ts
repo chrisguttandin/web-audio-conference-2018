@@ -8,6 +8,10 @@ export class HomePage {
         return element(by.css('wac-app h1')).getText();
     }
 
+    public getSubHeadline () {
+        return element(by.css('wac-app h2:first-child')).getText();
+    }
+
     public navigateTo () {
         return browser.get((IS_SMOKE_TEST) ? 'https://chrisguttandin.github.io/web-audio-conference-2018' : '/');
     }
