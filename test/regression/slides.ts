@@ -171,8 +171,6 @@ describe('slides', () => {
         it('should look the same', async () => {
             navigateTo('/slides/9');
 
-            await new Promise((resolve) => setTimeout(resolve, 100000));
-
             const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-9');
 
             if (process.env.TRAVIS) {
