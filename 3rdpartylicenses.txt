@@ -288,6 +288,9 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 END OF TERMS AND CONDITIONS
 
 
+@angular/core
+MIT
+
 @angular/common
 MIT
 
@@ -301,12 +304,6 @@ MIT
 MIT
 
 @angular/service-worker
-MIT
-
-@angular/core
-MIT
-
-@angular/compiler
 MIT
 
 zone.js
