@@ -17,7 +17,7 @@ export class SlideFourComponent implements OnInit {
 
     public wallClock$!: Observable<number>;
 
-    public ngOnInit () {
+    public ngOnInit (): void {
         this.gameClock$ = generate(
             0,
             (value) => (value <= FIVE_MINUTES_IN_MILLISECONDS),

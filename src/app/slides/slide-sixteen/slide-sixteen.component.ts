@@ -27,7 +27,7 @@ export class SlideSixteenComponent implements OnInit {
 
     public legolandScore$!: Observable<number>;
 
-    public ngOnInit () {
+    public ngOnInit (): void {
         this.gameClock$ = generate(
             FIFTEEN_MINUTES_IN_MILLISECONDS,
             (value) => (value <= FOURTY_FIVE_MINUTES_IN_MILLISECONDS),

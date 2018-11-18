@@ -21,7 +21,7 @@ export class SlideSixComponent implements OnInit {
 
     public wallClock$!: Observable<number>;
 
-    public ngOnInit () {
+    public ngOnInit (): void {
         this.gameClock$ = generate(
             FIVE_MINUTES_IN_MILLISECONDS,
             (value) => (value <= FIFTEEN_MINUTES_IN_MILLISECONDS),
