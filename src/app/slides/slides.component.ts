@@ -1,6 +1,7 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostBinding, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { WindowService } from '../window.service';
 import { slideAnimation } from './slide.animation';
@@ -31,10 +32,15 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
     private _index: number;
 
-    private _routerEventsSubscription: any;
+    private _routerEventsSubscription: null | Subscription;
 
-    constructor (private _activatedRoute: ActivatedRoute, private _router: Router, private _windowService: WindowService) {
+    constructor (
+        private _activatedRoute: ActivatedRoute,
+        private _router: Router,
+        private _windowService: WindowService
+    ) {
         this._index = 0;
+        this._routerEventsSubscription = null;
     }
 
     @HostListener('document:keyup', [ '$event' ]) public handleKeyUp (event: KeyboardEvent): void {
@@ -60,7 +66,9 @@ export class SlidesComponent implements OnDestroy, OnInit {
     }
 
     public ngOnDestroy (): void {
-        this._routerEventsSubscription.unsubscribe();
+        if (this._routerEventsSubscription !== null) {
+            this._routerEventsSubscription.unsubscribe();
+        }
     }
 
     public ngOnInit (): void {
