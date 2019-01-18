@@ -19,6 +19,7 @@
         "amp-validator": "off",
         "apple-touch-icons": "off",
         "axe": "error",
+        "button-type": "error",
         "content-type": [
             "error",
             {
@@ -51,7 +52,12 @@
         "no-p3p": "error",
         "no-protocol-relative-urls": "error",
         "no-vulnerable-javascript-libraries": "error",
-        "sri": "error",
+        "sri": [
+            "error",
+            {
+                "originCriteria": "all"
+            }
+        ],
         "ssllabs": "error",
         "strict-transport-security": "off",
         "stylesheet-limits": "error",
