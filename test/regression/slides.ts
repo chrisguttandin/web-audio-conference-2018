@@ -245,22 +245,21 @@ describe('slides', () => {
 
     });
 
-    // @todo This test currently fails on Travis with an undebuggable 'RangeError: Index out of range' thrown deep inside of pngjs.
-    if (!env.TRAVIS) {
+    describe('fourteenth slide', () => {
 
-        describe('fourteenth slide', () => {
+        it('should look the same', async () => {
+            navigateTo('/slides/14');
 
-            it('should look the same', async () => {
-                navigateTo('/slides/14');
+            const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-14');
 
-                const result = await resembleElementShot(by.tagName('body'), 'test/screenshots/slide-14');
-
+            if (env.TRAVIS) {
+                expectElementShot(result).toHaveMismatchWithinRange(0, 0.2);
+            } else {
                 expectElementShot(result).toBeRegressionFree();
-            });
-
+            }
         });
 
-    }
+    });
 
     describe('fifteenth slide', () => {
 
