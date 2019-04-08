@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1554304271139,
+  "timestamp": 1554747134338,
   "index": "/web-audio-conference-2018/index.html",
   "assetGroups": [
     {
@@ -8,12 +8,12 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2018/scripts/4.931894c73419abdf0de9.js",
+        "/web-audio-conference-2018/scripts/4.eb7e0913feceeccaf51d.js",
         "/web-audio-conference-2018/index.html",
-        "/web-audio-conference-2018/scripts/main.731f6857fe5feaaf85fb.js",
-        "/web-audio-conference-2018/scripts/polyfills.a340e5b77583aee02db5.js",
+        "/web-audio-conference-2018/scripts/main.2dd228edc21e8c690deb.js",
+        "/web-audio-conference-2018/scripts/polyfills.61ddf36ababb35d368c0.js",
         "/web-audio-conference-2018/scripts/scripts.2e1ce7e02614f3c7a0cf.js",
-        "/web-audio-conference-2018/styles/styles.35d4f5924ad39287ad7b.css"
+        "/web-audio-conference-2018/styles/styles.a030180d25368a79aa26.css"
       ],
       "patterns": []
     },
@@ -27,12 +27,12 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2018/scripts/4.931894c73419abdf0de9.js": "cf6f5249c020a431a39b76977c834de025fb6c81",
-    "/web-audio-conference-2018/index.html": "bc800b79ca2a51156fd5aabd4b83a3676029f1c8",
-    "/web-audio-conference-2018/scripts/main.731f6857fe5feaaf85fb.js": "113c495451aa77e8fc9649a60ae33077737d8ecc",
-    "/web-audio-conference-2018/scripts/polyfills.a340e5b77583aee02db5.js": "6946e10a03311677a01490b8e91741668e64e17e",
+    "/web-audio-conference-2018/scripts/4.eb7e0913feceeccaf51d.js": "5ce289f457a0e535ce5c4808e94fda3d6ad8f3a6",
+    "/web-audio-conference-2018/index.html": "7e527ab23691670b18601a16c2638ab9f3e08b64",
+    "/web-audio-conference-2018/scripts/main.2dd228edc21e8c690deb.js": "113c495451aa77e8fc9649a60ae33077737d8ecc",
+    "/web-audio-conference-2018/scripts/polyfills.61ddf36ababb35d368c0.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "/web-audio-conference-2018/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "5953fb53b4617918a379ad521eea7b157b244d46",
-    "/web-audio-conference-2018/styles/styles.35d4f5924ad39287ad7b.css": "70c11679ea16d9c32a6c11fd909f90501a1c0f6e"
+    "/web-audio-conference-2018/styles/styles.a030180d25368a79aa26.css": "8c3b786ccdce51c52365f211efbc2ba3b750f633"
   },
   "navigationUrls": [
     {
