@@ -50,6 +50,10 @@ h2 {
     font-size: 80%;
 }
 
+ul {
+    padding: 0 0 0 0.5em;
+}
+
 li {
     margin: 0.5em 0;
 }
