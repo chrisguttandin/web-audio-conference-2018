@@ -77,10 +77,10 @@
 }
 
 .smartphone-viewport {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    border-left: 10px solid #000;
+    border-right: 10px solid #000;
     height: 87%;
-    margin: 3.333% 0 0 calc(73.333% - 2px);
+    margin: 3.333% 0 0 calc(73.333% - 10px);
     width: 20%;
 }
 
@@ -89,6 +89,7 @@
 }
 
 .headline {
+    line-height: 160%;
     width: 100%;
 }
 
@@ -113,16 +114,22 @@
 .category {
     background-color: #000;
     display: block;
+    font-size: 120%;
+    line-height: 140%;
     margin: 10% 0 0 0;
 }
 
 .left-aligned-cell {
+    font-size: 120%;
+    line-height: 140%;
     padding: 0 10% 0 13%;
     text-align: left;
     width: 50%;
 }
 
 .right-aligned-cell {
+    font-size: 120%;
+    line-height: 140%;
     padding: 0 13% 0 10%;
     text-align: right;
     width: 50%;
@@ -136,8 +143,6 @@ h3 {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    font-size: 120%;
-    line-height: 140%;
     padding: 0;
     width: 100%;
 }
