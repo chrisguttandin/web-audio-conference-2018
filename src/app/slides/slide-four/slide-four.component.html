@@ -5,7 +5,6 @@
         <use xlink:href="#screen" x="10" y="10"/>
         <use xlink:href="#keyboard" x="0" y="140"/>
         <use xlink:href="#viewport" x="20" y="21"/>
-        <use xlink:href="#wall-clock" x="300" y="0"/>
     </svg>
     <div class="wall-clock stage-prop">
         <span class="digits minutes">{{ wallClock$ | async | date:'HH':'GMT' }}</span>
