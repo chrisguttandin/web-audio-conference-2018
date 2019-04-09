@@ -2,14 +2,14 @@ main {
     box-sizing: border-box;
     height: 100%;
     margin: 0;
-    padding: 4vw;
+    padding: 3.9vw;
     width: 100%;
 }
 
 @media (min-aspect-ratio: 4/3) {
 
     main {
-        padding: 5.333vh;
+        padding: 5.2vh;
     }
 
 }

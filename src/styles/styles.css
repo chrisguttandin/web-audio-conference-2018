@@ -44,13 +44,16 @@ p {
 
 h1 {
     font-size: 100%;
+    letter-spacing: -0.005em;
 }
 
 h2 {
     font-size: 80%;
+    letter-spacing: -0.005em;
 }
 
 ul {
+    margin: 0.5em 0;
     padding: 0 0 0 0.5em;
 }
 
