@@ -1,6 +1,6 @@
 module.exports = {
     'runtime': [
-        'build/web-audio-conference-2018/runtime.*.js'
+        'build/web-audio-conference-2018/runtime-es*.js'
     ],
     'scripts': [
         'build/web-audio-conference-2018/!(ngsw-worker).js'
