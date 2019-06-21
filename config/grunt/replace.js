@@ -21,7 +21,7 @@ module.exports = (grunt) => {
         'bundle': {
             files: {
                 './': [
-                    'build/web-audio-conference-2018/main-es*.js'
+                    'build/web-audio-conference-2018/main*.js'
                 ]
             },
             options: {
