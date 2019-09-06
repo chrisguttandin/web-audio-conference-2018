@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1566568545686,
+  "timestamp": 1567775537727,
   "index": "/web-audio-conference-2018/index.html",
   "assetGroups": [
     {
@@ -8,10 +8,10 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2018/scripts/4.63548dee5da4481a6b4d.js",
+        "/web-audio-conference-2018/scripts/4.8c2c8dd7e8a4303fcadb.js",
         "/web-audio-conference-2018/index.html",
-        "/web-audio-conference-2018/scripts/main.5d040c122e429fd8e915.js",
-        "/web-audio-conference-2018/scripts/polyfills.33891c2cf4c7fec66a3c.js",
+        "/web-audio-conference-2018/scripts/main.922f722e0bf4084ea93f.js",
+        "/web-audio-conference-2018/scripts/polyfills.b741439efe826e287fbc.js",
         "/web-audio-conference-2018/scripts/scripts.2e1ce7e02614f3c7a0cf.js",
         "/web-audio-conference-2018/styles/styles.22c32252404180ab72ed.css"
       ],
@@ -37,10 +37,10 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2018/scripts/4.63548dee5da4481a6b4d.js": "7ca69200cf4bdac52f777bc562b8beea9b0531a6",
-    "/web-audio-conference-2018/index.html": "d42c208c57854df795bee8b608db732a54ecef35",
-    "/web-audio-conference-2018/scripts/main.5d040c122e429fd8e915.js": "6662512d752115854a23d66c0cf2f1027470282a",
-    "/web-audio-conference-2018/scripts/polyfills.33891c2cf4c7fec66a3c.js": "a514da8731833287c9583044e9d512d74c45312a",
+    "/web-audio-conference-2018/scripts/4.8c2c8dd7e8a4303fcadb.js": "13f787755cfa6f7fed58627333af3599b87732fc",
+    "/web-audio-conference-2018/index.html": "7c5a77dba181766577fdb3ee0f09f3fd1e864f92",
+    "/web-audio-conference-2018/scripts/main.922f722e0bf4084ea93f.js": "fd86738ed586c8837bf4ff9c2d3361a4b8057770",
+    "/web-audio-conference-2018/scripts/polyfills.b741439efe826e287fbc.js": "a514da8731833287c9583044e9d512d74c45312a",
     "/web-audio-conference-2018/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "5953fb53b4617918a379ad521eea7b157b244d46",
     "/web-audio-conference-2018/styles/styles.22c32252404180ab72ed.css": "d6cee19e853a0c41fabcd132c04e2156b31b8b5e"
   },
