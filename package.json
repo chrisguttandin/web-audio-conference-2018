@@ -158,5 +158,5 @@
   "scripts": {
     "test": "grunt lint && grunt test"
   },
-  "version": "1.2.37"
+  "version": "1.2.38"
 }
