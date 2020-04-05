@@ -6,6 +6,8 @@ import { filter } from 'rxjs/operators';
 import { WindowService } from '../window.service';
 import { slideAnimation } from './slide.animation';
 
+const EXCLUDED_FORWARD_TRANSITIONS = [ 5, 6, 7, 8 ];
+
 const NO_TRANSITION_PARAMS = { duration: '0s', enterTransform: 'none', leaveTransform: 'none', top: 'auto', width: 'auto' };
 
 @Component({
@@ -107,18 +109,15 @@ export class SlidesComponent implements OnDestroy, OnInit {
             const newIndex = parseInt(activatedChildRoute.snapshot.url[0].path, 10);
             const direction = (newIndex > this._index) ? 'forwards' : 'backwards';
 
-            if ((this._index === 4 && newIndex === 5) ||
-                    (this._index === 5 && newIndex === 6) ||
-                    (this._index === 6 && newIndex === 7) ||
-                    (this._index === 7 && newIndex === 8)) {
-                this._index = newIndex;
+            this._index = newIndex;
+
+            if (direction === 'forwards' && EXCLUDED_FORWARD_TRANSITIONS.includes(newIndex)) {
                 this.transition = { params: NO_TRANSITION_PARAMS, value: newIndex };
             } else {
                 const nativeWindow = this._windowService.nativeWindow;
                 const isPortrait = (nativeWindow !== null && (nativeWindow.innerWidth / nativeWindow.innerHeight < 4 / 3));
                 const distance = (isPortrait) ? '108%' : '108vw';
 
-                this._index = newIndex;
                 this.transition = {
                     params: {
                         duration: '0.5s',
