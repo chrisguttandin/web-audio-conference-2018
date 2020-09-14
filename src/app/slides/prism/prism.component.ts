@@ -19,7 +19,7 @@ import 'prismjs/components/prism-typescript'; // tslint:disable-line:no-submodul
     templateUrl: './prism.component.html'
 })
 export class PrismComponent implements AfterViewInit, OnChanges {
-    @Input() public readonly language!: string;
+    @Input() public language!: string;
 
     @ViewChild('element', { static: true }) private _element!: ElementRef;
 
