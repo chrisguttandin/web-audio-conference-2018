@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, generate } from 'rxjs';
-import { map, share } from 'rxjs/operators';
+import { Observable, animationFrameScheduler, generate, map, share } from 'rxjs';
 
 const FIVE_MINUTES_IN_MILLISECONDS = 300000;
 const KICK_OFF_IN_MILLISECONDS = 74700000;

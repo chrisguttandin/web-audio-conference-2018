@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, generate } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, animationFrameScheduler, generate, map } from 'rxjs';
 
 const FIVE_MINUTES_AFTER_KICK_OFF_IN_MILLISECONDS = 75000000;
 const STEP_SIZE_IN_MILLISECONDS = 2000;

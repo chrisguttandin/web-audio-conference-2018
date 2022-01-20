@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, generate } from 'rxjs';
-import { distinctUntilChanged, map, share } from 'rxjs/operators';
+import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share } from 'rxjs';
 
 const EIGHTEEN_MINUTES_IN_MILLISECONDS = 1080000;
 const FIFTEEN_MINUTES_IN_MILLISECONDS = 900000;
