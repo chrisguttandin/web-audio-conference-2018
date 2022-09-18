@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share } from 'rxjs';
+import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share, from, switchMap, iif, of } from 'rxjs';
+import { mediaQueryMatch } from 'subscribable-things';
 
 const EIGHTEEN_MINUTES_IN_MILLISECONDS = 1080000;
 const FIFTEEN_MINUTES_IN_MILLISECONDS = 900000;
@@ -26,12 +27,20 @@ export class SlideSixteenComponent implements OnInit {
     public legolandScore$!: Observable<number>;
 
     public ngOnInit(): void {
-        this.gameClock$ = generate(
-            FIFTEEN_MINUTES_IN_MILLISECONDS,
-            (value) => value <= FOURTY_FIVE_MINUTES_IN_MILLISECONDS,
-            (value) => value + STEP_SIZE_IN_MILLISECONDS,
-            animationFrameScheduler
-        ).pipe(share());
+        this.gameClock$ = from(mediaQueryMatch('(prefers-reduced-motion: reduce)')).pipe(
+            switchMap((matches) =>
+                iif(
+                    () => matches,
+                    of(FIFTEEN_MINUTES_IN_MILLISECONDS),
+                    generate(
+                        FIFTEEN_MINUTES_IN_MILLISECONDS,
+                        (value) => value <= FOURTY_FIVE_MINUTES_IN_MILLISECONDS,
+                        (value) => value + STEP_SIZE_IN_MILLISECONDS,
+                        animationFrameScheduler
+                    ).pipe(share())
+                )
+            )
+        );
 
         this.disneylandAttempts$ = this.gameClock$.pipe(
             map((value) =>

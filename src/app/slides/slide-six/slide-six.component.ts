@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share } from 'rxjs';
+import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share, from, switchMap, iif, of } from 'rxjs';
+import { mediaQueryMatch } from 'subscribable-things';
 
 const FIFTEEN_MINUTES_IN_MILLISECONDS = 900000;
 const FIVE_MINUTES_IN_MILLISECONDS = 300000;
@@ -20,12 +21,20 @@ export class SlideSixComponent implements OnInit {
     public wallClock$!: Observable<number>;
 
     public ngOnInit(): void {
-        this.gameClock$ = generate(
-            FIVE_MINUTES_IN_MILLISECONDS,
-            (value) => value <= FIFTEEN_MINUTES_IN_MILLISECONDS,
-            (value) => value + STEP_SIZE_IN_MILLISECONDS,
-            animationFrameScheduler
-        ).pipe(share());
+        this.gameClock$ = from(mediaQueryMatch('(prefers-reduced-motion: reduce)')).pipe(
+            switchMap((matches) =>
+                iif(
+                    () => matches,
+                    of(FIVE_MINUTES_IN_MILLISECONDS),
+                    generate(
+                        FIVE_MINUTES_IN_MILLISECONDS,
+                        (value) => value <= FIFTEEN_MINUTES_IN_MILLISECONDS,
+                        (value) => value + STEP_SIZE_IN_MILLISECONDS,
+                        animationFrameScheduler
+                    ).pipe(share())
+                )
+            )
+        );
 
         this.disneylandScore$ = this.gameClock$.pipe(
             map((value) => (value >= TEN_MINUTES_IN_MILLISECONDS ? 1 : 0)),

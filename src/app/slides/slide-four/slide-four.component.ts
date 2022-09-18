@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, generate, map, share } from 'rxjs';
+import { Observable, animationFrameScheduler, generate, map, share, switchMap, from, iif, of } from 'rxjs';
+import { mediaQueryMatch } from 'subscribable-things';
 
 const FIVE_MINUTES_IN_MILLISECONDS = 300000;
 const KICK_OFF_IN_MILLISECONDS = 74700000;
@@ -16,12 +17,20 @@ export class SlideFourComponent implements OnInit {
     public wallClock$!: Observable<number>;
 
     public ngOnInit(): void {
-        this.gameClock$ = generate(
-            0,
-            (value) => value <= FIVE_MINUTES_IN_MILLISECONDS,
-            (value) => value + STEP_SIZE_IN_MILLISECONDS,
-            animationFrameScheduler
-        ).pipe(share());
+        this.gameClock$ = from(mediaQueryMatch('(prefers-reduced-motion: reduce)')).pipe(
+            switchMap((matches) =>
+                iif(
+                    () => matches,
+                    of(0),
+                    generate(
+                        0,
+                        (value) => value <= FIVE_MINUTES_IN_MILLISECONDS,
+                        (value) => value + STEP_SIZE_IN_MILLISECONDS,
+                        animationFrameScheduler
+                    ).pipe(share())
+                )
+            )
+        );
 
         this.wallClock$ = this.gameClock$.pipe(map((value) => value + KICK_OFF_IN_MILLISECONDS));
     }
