@@ -5,11 +5,9 @@
 }
 
 @media (min-aspect-ratio: 4/3) {
-
     .stage {
         margin: 12.533vh 0 0;
     }
-
 }
 
 .stage-prop {
@@ -18,7 +16,7 @@
 
 .game-clock {
     background-color: rgba(0, 0, 0, 0.5);
-    color: #FFF;
+    color: #fff;
     display: flex;
     font-size: 80%;
     margin: 8% 0 0 28.333%;
@@ -70,7 +68,7 @@
 
 .home-team-score .digit,
 .away-team-score .digit {
-    color: #FFF;
+    color: #fff;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -82,6 +80,11 @@
     height: 87%;
     margin: 3.333% 0 0 calc(73.333% - 10px);
     width: 20%;
+}
+
+h3 {
+    color: #000;
+    margin: 0 9%;
 }
 
 .smartphone-viewport h3 {
@@ -104,11 +107,11 @@
 }
 
 .disney {
-    background-color: #0596E6;
+    background-color: #0596e6;
 }
 
 .lego {
-    background-color: #E3000D;
+    background-color: #e3000d;
 }
 
 .category {
@@ -133,11 +136,6 @@
     padding: 0 13% 0 10%;
     text-align: right;
     width: 50%;
-}
-
-h3 {
-    color: #000;
-    margin: 0 9%;
 }
 
 table {
