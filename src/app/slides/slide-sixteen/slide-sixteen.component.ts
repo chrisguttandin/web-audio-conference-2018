@@ -14,7 +14,7 @@ const TWENTY_MINUTES_IN_MILLISECONDS = 1200000;
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styleUrls: ['./slide-sixteen.component.css'],
+    styleUrls: ['./slide-sixteen.component.scss'],
     templateUrl: './slide-sixteen.component.html'
 })
 export class SlideSixteenComponent implements OnInit {

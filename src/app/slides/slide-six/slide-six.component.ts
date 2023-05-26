@@ -10,7 +10,7 @@ const TEN_MINUTES_IN_MILLISECONDS = 300000;
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styleUrls: ['./slide-six.component.css'],
+    styleUrls: ['./slide-six.component.scss'],
     templateUrl: './slide-six.component.html'
 })
 export class SlideSixComponent implements OnInit {

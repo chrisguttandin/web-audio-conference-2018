@@ -8,7 +8,7 @@ const THIRTEEN_MINUTES_IN_MILLISECONDS = 1800000;
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styleUrls: ['./slide-five.component.css'],
+    styleUrls: ['./slide-five.component.scss'],
     templateUrl: './slide-five.component.html'
 })
 export class SlideFiveComponent implements OnInit {

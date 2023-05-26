@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'wac-defs',
-    styleUrls: ['./defs.component.css'],
+    styleUrls: ['./defs.component.scss'],
     templateUrl: './defs.component.html'
 })
 export class DefsComponent {}
