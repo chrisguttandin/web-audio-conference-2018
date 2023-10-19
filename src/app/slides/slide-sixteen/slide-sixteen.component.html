@@ -2,10 +2,10 @@
 <div class="stage">
     <wac-defs></wac-defs>
     <svg class="stage-prop" version="1.1" viewBox="0 0 300 150">
-        <use xlink:href="#screen" x="10" y="10"/>
-        <use xlink:href="#keyboard" x="0" y="140"/>
-        <use xlink:href="#viewport" x="20" y="21"/>
-        <use xlink:href="#smartphone" x="210" y="0"/>
+        <use xlink:href="#screen" x="10" y="10" />
+        <use xlink:href="#keyboard" x="0" y="140" />
+        <use xlink:href="#viewport" x="20" y="21" />
+        <use xlink:href="#smartphone" x="210" y="0" />
     </svg>
     <div class="stage-prop smartphone-viewport">
         <h3>Stats</h3>
@@ -46,22 +46,13 @@
                     <td class="left-aligned-cell lego" headers="lego corners">3</td>
                     <td class="right-aligned-cell disney" headers="disney corners">0</td>
                 </tr>
-                <!-- <tr>
-                    <th id="possession" class="headline" colspan="2" scope="colgroup">
-                        <span class="category">Possession</span>
-                    </th>
-                </tr>
-                <tr>
-                    <td class="left-aligned-cell lego" headers="lego possession">40%</td>
-                    <td class="right-aligned-cell disney" headers="disney possession">60%</td>
-                </tr> -->
             </tbody>
         </table>
     </div>
     <div class="game-clock stage-prop">
-        <span class="digits minutes">{{ gameClock$ | async | date:'mm' }}</span>
+        <span class="digits minutes">{{ gameClock$ | async | date : 'mm' }}</span>
         <span class="colon">:</span>
-        <span class="digits seconds">{{ gameClock$ | async | date:'ss' }}</span>
+        <span class="digits seconds">{{ gameClock$ | async | date : 'ss' }}</span>
     </div>
     <div class="home-team-score lego stage-prop">
         <div class="wrapper">
