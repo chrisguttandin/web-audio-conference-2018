@@ -1,6 +1,8 @@
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, animationFrameScheduler, generate, map, share, switchMap, from, iif, of } from 'rxjs';
 import { mediaQueryMatch } from 'subscribable-things';
+import { DefsComponent } from '../defs/defs.component';
 
 const FIVE_MINUTES_IN_MILLISECONDS = 300000;
 const KICK_OFF_IN_MILLISECONDS = 74700000;
@@ -8,6 +10,9 @@ const STEP_SIZE_IN_MILLISECONDS = 200;
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [AsyncPipe, DatePipe, DefsComponent],
+    selector: 'wac-slide-four',
+    standalone: true,
     styleUrls: ['./slide-four.component.scss'],
     templateUrl: './slide-four.component.html'
 })

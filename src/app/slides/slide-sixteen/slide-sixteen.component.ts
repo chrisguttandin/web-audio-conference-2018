@@ -1,6 +1,8 @@
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share, from, switchMap, iif, of } from 'rxjs';
 import { mediaQueryMatch } from 'subscribable-things';
+import { DefsComponent } from '../defs/defs.component';
 
 const EIGHTEEN_MINUTES_IN_MILLISECONDS = 1080000;
 const FIFTEEN_MINUTES_IN_MILLISECONDS = 900000;
@@ -14,6 +16,9 @@ const TWENTY_MINUTES_IN_MILLISECONDS = 1200000;
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [AsyncPipe, DatePipe, DefsComponent],
+    selector: 'wac-slide-sixteen',
+    standalone: true,
     styleUrls: ['./slide-sixteen.component.scss'],
     templateUrl: './slide-sixteen.component.html'
 })
@@ -47,10 +52,10 @@ export class SlideSixteenComponent implements OnInit {
                 value >= THIRTY_EIGHT_MINUTES_IN_MILLISECONDS
                     ? 4
                     : value >= THIRTY_TWO_MINUTES_IN_MILLISECONDS
-                    ? 3
-                    : value >= NINETEEN_MINUTES_IN_MILLISECONDS
-                    ? 2
-                    : 1
+                      ? 3
+                      : value >= NINETEEN_MINUTES_IN_MILLISECONDS
+                        ? 2
+                        : 1
             ),
             distinctUntilChanged()
         );
@@ -60,10 +65,10 @@ export class SlideSixteenComponent implements OnInit {
                 value >= TWENTY_FIVE_MINUTES_IN_MILLISECONDS
                     ? 9
                     : value >= TWENTY_MINUTES_IN_MILLISECONDS
-                    ? 8
-                    : value >= EIGHTEEN_MINUTES_IN_MILLISECONDS
-                    ? 7
-                    : 6
+                      ? 8
+                      : value >= EIGHTEEN_MINUTES_IN_MILLISECONDS
+                        ? 7
+                        : 6
             ),
             distinctUntilChanged()
         );
