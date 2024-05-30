@@ -1,6 +1,18 @@
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, distinctUntilChanged, generate, map, share, from, switchMap, iif, of } from 'rxjs';
+import {
+    Observable,
+    animationFrameScheduler,
+    distinctUntilChanged,
+    generate,
+    map,
+    share,
+    from,
+    switchMap,
+    iif,
+    of,
+    catchError
+} from 'rxjs';
 import { mediaQueryMatch } from 'subscribable-things';
 import { DefsComponent } from '../defs/defs.component';
 
@@ -33,6 +45,7 @@ export class SlideSixteenComponent implements OnInit {
 
     public ngOnInit(): void {
         this.gameClock$ = from(mediaQueryMatch('(prefers-reduced-motion: reduce)')).pipe(
+            catchError(() => of(true)),
             switchMap((matches) =>
                 iif(
                     () => matches,

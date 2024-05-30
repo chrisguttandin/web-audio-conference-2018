@@ -1,6 +1,6 @@
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, animationFrameScheduler, generate, map, from, switchMap, iif, of } from 'rxjs';
+import { Observable, animationFrameScheduler, generate, map, from, switchMap, iif, of, catchError } from 'rxjs';
 import { mediaQueryMatch } from 'subscribable-things';
 import { DefsComponent } from '../defs/defs.component';
 
@@ -21,6 +21,7 @@ export class SlideFiveComponent implements OnInit {
 
     public ngOnInit(): void {
         this.wallClock$ = from(mediaQueryMatch('(prefers-reduced-motion: reduce)')).pipe(
+            catchError(() => of(true)),
             switchMap((matches) =>
                 iif(
                     () => matches,
