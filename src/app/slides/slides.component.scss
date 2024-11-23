@@ -8,6 +8,6 @@ main {
 
 @media (min-aspect-ratio: 4/3) {
     main {
-        padding: 5.2vh;
+        padding: calc(3.9vh * 4 / 3);
     }
 }

@@ -21,10 +21,10 @@ body {
 
 @media (min-aspect-ratio: 4/3) {
     body {
-        font-size: 10.666vh;
+        font-size: calc(8vh * 4 / 3);
         height: 100%;
         margin: 0 auto;
-        width: 133vh;
+        width: calc(100vh * 4 / 3);
     }
 }
 

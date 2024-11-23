@@ -6,7 +6,7 @@
 
 @media (min-aspect-ratio: 4/3) {
     .stage {
-        margin: 22.933vh 0 0;
+        margin: calc(17.2vh * 4 / 3) 0 0;
     }
 }
 

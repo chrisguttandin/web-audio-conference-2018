@@ -124,8 +124,8 @@ export class SlidesComponent implements OnDestroy, OnInit {
                         duration: '0.5s',
                         enterTransform: direction === 'forwards' ? `translateX(${distance})` : `translateX(-${distance})`,
                         leaveTransform: direction === 'forwards' ? `translateX(-${distance})` : `translateX(${distance})`,
-                        top: isPortrait ? '4vw' : '5.333vh',
-                        width: isPortrait ? 'calc(92%)' : 'calc(122.666vh)'
+                        top: isPortrait ? '3.9vw' : '5.2vh',
+                        width: isPortrait ? '92.2%' : '122.9333333333vh'
                     },
                     value: newIndex
                 };
