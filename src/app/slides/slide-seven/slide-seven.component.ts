@@ -5,7 +5,6 @@ import { DefsComponent } from '../defs/defs.component';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [DefsComponent],
     selector: 'wac-slide-seven',
-    standalone: true,
     styleUrls: ['./slide-seven.component.scss'],
     templateUrl: './slide-seven.component.html'
 })

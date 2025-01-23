@@ -26,7 +26,6 @@ const TEN_MINUTES_IN_MILLISECONDS = 300000;
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [AsyncPipe, DatePipe, DefsComponent],
     selector: 'wac-slide-six',
-    standalone: true,
     styleUrls: ['./slide-six.component.scss'],
     templateUrl: './slide-six.component.html'
 })

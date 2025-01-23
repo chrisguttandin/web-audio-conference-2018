@@ -12,7 +12,6 @@ const STEP_SIZE_IN_MILLISECONDS = 200;
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [AsyncPipe, DatePipe, DefsComponent],
     selector: 'wac-slide-four',
-    standalone: true,
     styleUrls: ['./slide-four.component.scss'],
     templateUrl: './slide-four.component.html'
 })

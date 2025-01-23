@@ -12,7 +12,6 @@ const THIRTEEN_MINUTES_IN_MILLISECONDS = 1800000;
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [AsyncPipe, DatePipe, DefsComponent],
     selector: 'wac-slide-five',
-    standalone: true,
     styleUrls: ['./slide-five.component.scss'],
     templateUrl: './slide-five.component.html'
 })
