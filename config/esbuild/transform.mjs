@@ -1,6 +1,7 @@
-import { minify } from 'html-minifier';
 import { JSDOM } from 'jsdom';
+import { minify } from 'html-minifier';
 
+// eslint-disable-next-line import/no-default-export
 export default (indexHtml) => {
     const jsdom = new JSDOM(indexHtml);
     const options = {
